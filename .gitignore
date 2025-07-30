@@ -3,3 +3,7 @@ __pycache__/
 dist/
 build/
 *.exe
+logs/
+.vscode/
+Thumbs.db
+.DS_Store
