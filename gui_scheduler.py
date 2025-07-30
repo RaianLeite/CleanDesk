@@ -3,15 +3,18 @@ import schedule
 import threading
 import time
 from mover import organizar_pasta
+from logger_setup import logger
 
 def run_schedule(interval):
     if interval == "manual":
+        logger.info("Organização manual iniciada via GUI.")
         organizar_pasta()
         return
 
     minutes = int(interval)
-    print(f"Agendamento iniciado: rodando a cada {minutes} minutos.")
+    logger.info(f"Agendamento iniciado via GUI: rodando a cada {minutes} minutos.")
     schedule.every(minutes).minutes.do(organizar_pasta)
+
     while True:
         schedule.run_pending()
         time.sleep(1)
