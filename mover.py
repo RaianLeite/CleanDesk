@@ -3,7 +3,7 @@ import shutil
 from categorizer import identificar_categoria
 from logger_setup import logger
 
-def organizar_pasta(pasta_origem="C:/Users/raian/Downloads"):
+def organizar_pasta(pasta_origem=os.path.join(os.path.expanduser("~"), "Downloads")):
     logger.info(f"Organizando a pasta: {pasta_origem}")
 
     pasta_outros = os.path.join(pasta_origem, "Outros")
