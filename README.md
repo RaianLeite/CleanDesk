@@ -101,6 +101,7 @@ pyinstaller --onefile --windowed --icon=icon.ico main.py
 
 ```
 📁 CleanDesk
+├── CleanDesk.zip        # Zip contendo o executável e o README explicativo
 ├── main.py              # Script principal
 ├── schedule_runner.py   # Script com agendamento
 ├── icon.ico             # Ícone para o executável
